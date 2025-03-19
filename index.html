@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitFinder</title>
+    <script type="module" crossorigin src="https://Bricafio.github.io/GitFinder/assets/index-B75te8pk.js"></script>
+    <link rel="stylesheet" crossorigin href="https://Bricafio.github.io/GitFinder/assets/index-GrlZODm_.css">
+  </head>
+
+  <body class="max-w-[900px] mx-auto w-full min-h-screen dark:bg-[#141c2f] bg-[#f5f8ff] p-5 flex flex-col justify-center gap-5">
+    <nav class="flex items-center justify-between py-2">
+      <h1 class="text-2xl md:text-3xl dark:text-white text-black font-bold font-mono">devfinder</h1>
+      <button class="cursor-pointer text-lg md:text-xl dark:text-white text-black font-mono tracking-widest" id="togglePalet">
+        <p class="inline" id="paletName">LIGHT</p>
+        <svg class="inline w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" id="paletIcon"></svg>
+      </button>
+    </nav>
+
+    <search class="w-full p-2 dark:bg-[#1f2a48] bg-[#fefefe] rounded-2xl flex flex-col sm:flex-row justify-between items-center gap-2 not-dark:shadow-lg">
+      <div class="flex w-full items-center">
+        <label class="text-xl text-[#0079fe] px-2 cursor-pointer" for="inputSearch">🔍︎</label>
+        <input class="sm:text-xl text-xs flex-1 px-2 py-2 bg-transparent dark:text-white text-black outline-none font-mono" type="text" placeholder="Search GitHub username..." id="inputSearch" autocomplete="off">
+      </div>
+      <button class="w-full sm:w-auto sm:basis-1/5 py-2 px-4 rounded-xl bg-[#0079fe] text-white text-lg font-bold cursor-pointer" type="submit" id="searchTButton">Search</button>
+    </search>
+
+    <article class="w-full px-10 py-6 dark:bg-[#1f2a48] bg-[#fefefe] rounded-2xl flex flex-col gap-7 not-dark:shadow-xl" id="profileCard" hidden>
+      <div class="flex flex-row items-start gap-5">
+        <img src="https://avatars.githubusercontent.com/u/583231?v=4" class="w-[90px] h-[90px] rounded-full" id="profileImg">
+        <div class="text-left">
+          <h2 class="sm:text-xl text-lg dark:text-white text-black font-mono" id="profileName">The Octocat</h2>
+          <h3 class="sm:text-base text-sm text-[#0079fe] py-1" id="profileTag">@octocat</h3>
+          <h3 class="sm:text-base text-sm dark:text-white text-black font-mono"> Joined <b id="profileJoined">25 Jan 2011</b></h3>
+        </div>
+      </div> 
+
+      <p class="dark:text-white text-black text-pretty font-mono" id="profileBio"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo repudiandae atque, asperiores harum hic repellat distinctio consequatur voluptas quisquam maiores mollitia quis perferendis excepturi earum odit pariatur adipisci repellendus non. </p>
+
+      <section class="py-4 my-2 rounded-2xl dark:bg-[#141c2f] bg-[rgb(238,244,255)] grid grid-cols-3 gap-2 justify-items-center items-center">
+        <p class="dark:text-white text-lack text-xs md:text-base font-mono">
+          Repos <b class="block text-center" id="profileRepos">8</b>
+        </p>
+
+        <p class="dark:text-white text-lack text-xs md:text-base font-mono">Followers 
+          <b class="block text-center" id="profileFollowers">3938</b>
+        </p>
+
+        <p class="dark:text-white text-lack text-xs md:text-base font-mono">
+          Following <b class="block text-center" id="profileFollowing">9</b>
+        </p>
+      </section>
+
+      <aside class="py-3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <p class="text-base font-mono flex items-center gap-2">
+          <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" id="locateIconContainer"></svg>
+          <b class="dark:text-white text-[#4f6a95]" id="profileLocation">San Franciso</b>
+        </p>
+
+        <p class="text-base font-mono flex items-center gap-2"> 
+          <svg class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" id="linkIconContainer">
+          </svg>     
+          <a href="" class="truncate dark:text-white text-[#4f6a95]" id="profileLink">https://github.blog</a> 
+        </p>
+
+        <p class="text-base font-mono flex items-center gap-2"> 
+          <svg class="w-5 h-5 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="currentColor" id="twitterIconContainer">
+          </svg>
+          <b class="dark:text-white text-[#4f6a95]" id="profileTwitter">Not Available</b>
+        </p>
+
+        <p class="text-base font-mono flex items-center gap-2">
+          <svg class="w-5 h-5 text-gray-800 dark:text-white" xmlns="http://www.w3.org/2000/svg" fill="currentColor" id="houseIconContainer">
+          </svg>
+          <b class="dark:text-white text-[#4f6a95]" id="profileCompany">@github</b>
+        </p>
+      </aside>
+    </article>
+  </body>
+</html>
